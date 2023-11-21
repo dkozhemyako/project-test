@@ -14,6 +14,7 @@ services:
       - redis
 
   php:
+    user: "www-data:www-data"
     build:
       context: dockerfiles
       dockerfile: php.dockerfile
