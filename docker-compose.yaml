@@ -19,8 +19,8 @@ services:
       context: dockerfiles
       dockerfile: php.dockerfile
       args:
-        GROUP_ID: 1000
-        USER_ID: 1000
+        GROUP_ID: 30
+        USER_ID: 30
     volumes:
       - ./src:/var/www/laravel
 
