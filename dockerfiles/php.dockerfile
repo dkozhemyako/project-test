@@ -31,11 +31,5 @@ RUN if ! getent passwd www-data >/dev/null; then \
 # Змінюємо власника директорій на www-data
 RUN chown -R www-data:www-data /var/www
 
-# Створюємо батьківську групу та додаємо користувача www-data до неї
-RUN addgroup -g ${GROUP_ID} parent
-RUN echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories
-RUN apk add -U shadow
-RUN usermod -u ${USER_ID} -g ${GROUP_ID} www-data
-
 # Вказуємо робочу директорію та власника
 WORKDIR /var/www/laravel
