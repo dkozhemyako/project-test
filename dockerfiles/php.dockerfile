@@ -1,6 +1,5 @@
 FROM php:8.2-fpm-alpine
 
-ARG GROUP_ID
 ARG USER_ID
 
 RUN apk update
@@ -29,7 +28,7 @@ RUN if ! getent passwd www-data >/dev/null; then \
     fi
 
 # Змінюємо власника директорій на www-data
-RUN chown -R www-data:www-data /var/www
+RUN chown -R www-data:www-data /var/www/laravel
 
 # Вказуємо робочу директорію та власника
 WORKDIR /var/www/laravel
