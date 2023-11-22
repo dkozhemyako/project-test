@@ -14,7 +14,7 @@ services:
       - redis
 
   php:
-    user: "30:30"
+    user: "33:33"
     build:
       context: dockerfiles
       dockerfile: php.dockerfile
