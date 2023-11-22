@@ -29,7 +29,7 @@ RUN if ! getent passwd www-data >/dev/null; then \
     fi
 
 # Змінюємо власника директорій на www-data
-RUN chown -R www-data:www-data /var/www/laravel
+RUN chown -R www-data:www-data /var/www
 
 # Створюємо батьківську групу та додаємо користувача www-data до неї
 RUN addgroup -g ${GROUP_ID} parent
